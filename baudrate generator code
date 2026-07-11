@@ -40,12 +40,14 @@ module baudrate_gen #(
             counter_rx <= 0;
             enb_tx     <= 1'b0;
             enb_rx     <= 1'b0;
-        end else begin
+        end 
+        else begin
             // TX counter
             if(counter_tx == (DIV_TX - 1)) begin
                 counter_tx <= 0;
                 enb_tx     <= 1'b1;
-            end else begin
+            end 
+            else begin
                 counter_tx <= counter_tx + 1'b1;
                 enb_tx     <= 1'b0;
             end
